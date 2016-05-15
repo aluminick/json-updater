@@ -1,0 +1,35 @@
+{
+  "name": "json-updater",
+  "version": "1.0.0",
+  "description": "Nodejs insert to json file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/archuanickie/json-updater.git"
+  },
+  "keywords": [
+    "nodejs",
+    "jsonfile",
+    "json",
+    "insert",
+    "read",
+    "append",
+    "object",
+    "file",
+    "without",
+    "rewrite",
+    "rewriting",
+    "overwrite",
+    "overwriting",
+    "async"
+  ],
+  "author": "Nickie Archua",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/archuanickie/json-updater/issues"
+  },
+  "homepage": "https://github.com/archuanickie/json-updater#readme"
+}
