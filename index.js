@@ -87,24 +87,26 @@ var stream = {
 
 		var i = fileData.length;
 
-		for(i; i > 0; i--) {
-			/*****************************
-				Marks where to start writing to file
-			******************************/
-			if(close.found === false) {
-				if(fileData.charAt(i) === '}' || file.charAt(i) === ']') {
-					close.found = true;
-					close.bracket = fileData.charAt(i);
-				}
-			} else { //where to start appending
-				if(!(/\s/.test(fileData.charAt(i)))) {
-					startIdx = i+1;
-					break;
+		//if file is not empty
+		if(i !== 0) {
+			for(i; i > 0; i--) {
+				/*****************************
+					Marks where to start writing to file
+				******************************/
+				if(close.found === false) {
+					if(fileData.charAt(i) === '}' || file.charAt(i) === ']') {
+						close.found = true;
+						close.bracket = fileData.charAt(i);
+					}
+				} else { //where to start appending
+					if(!(/\s/.test(fileData.charAt(i)))) {
+						startIdx = i+1;
+						break;
+					}
 				}
 			}
+			strObj = ',' + strObj.substring(1, strObj.length-1) + close.bracket;
 		}
-
-		strObj = ',' + strObj.substring(1, strObj.length-1) + close.bracket;
 		
 		/***************************
 			Start writing strObj to json file
