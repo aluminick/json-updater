@@ -24,7 +24,11 @@
     "rewriting",
     "overwrite",
     "overwriting",
-    "async"
+    "async",
+    "write",
+    "createReadStream",
+    "createWriteStream",
+    "fs"
   ],
   "author": "Nickie Archua",
   "license": "MIT",
