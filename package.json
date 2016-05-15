@@ -1,6 +1,6 @@
 {
   "name": "json-updater",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Nodejs insert to json file",
   "main": "index.js",
   "scripts": {
