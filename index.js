@@ -94,7 +94,7 @@ var stream = {
 					Marks where to start writing to file
 				******************************/
 				if(close.found === false) {
-					if(fileData.charAt(i) === '}' || file.charAt(i) === ']') {
+					if(fileData.charAt(i) === '}' || fileData.charAt(i) === ']') {
 						close.found = true;
 						close.bracket = fileData.charAt(i);
 					}
