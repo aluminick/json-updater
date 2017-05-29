@@ -84,8 +84,8 @@ var stream = {
 		};
 
 		var startIdx = 0;
-
-		var i = fileData.length;
+		//removes non printable characters for correct length
+		var i = fileData.replace(/[^\x20-\x7E]+/g, '').length;
 
 		//if file is not empty
 		if(i !== 0) {
