@@ -46,7 +46,7 @@ var stream = {
 		if(typeof space === 'function')
 			callback = space;
 
-		var readerStream = fs.createReadStream(file);
+		var readerStream = fs.createReadStream(file,{encoding:"utf8"});
 		var data = '';
 
 		readerStream.on('error', function (err) {
@@ -84,8 +84,8 @@ var stream = {
 		};
 
 		var startIdx = 0;
-
-		var i = fileData.length;
+		//removes non printable characters for correct length
+		var i = fileData.replace(/[^\x20-\x7E]+/g, '').length;
 
 		//if file is not empty
 		if(i !== 0) {
@@ -101,6 +101,7 @@ var stream = {
 				} else { //where to start appending
 					if(!(/\s/.test(fileData.charAt(i)))) {
 						startIdx = i+1;
+						startIdx = Buffer.byteLength(fileData.substring(0,startIdx),'utf8');
 						break;
 					}
 				}
